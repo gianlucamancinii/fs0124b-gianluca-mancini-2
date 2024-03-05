@@ -1,0 +1,13 @@
+.bg-container {
+    background-color: rgb(15, 15, 15)
+}
+
+.text-custom{
+    color: #c5c5c5;
+}
+
+
+
+.gradient-custom{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}

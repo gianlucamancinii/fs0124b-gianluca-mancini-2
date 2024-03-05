@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./D7.js">
+
+function concatenaStringhe(str1, str2) {
+    let parte1 = str1.substring(0, 2);
+    
+    let parte2 = str2.slice(-3);
+
+    let risultato = parte1 + parte2; // Concatena le due parti
+
+    risultato = risultato.toUpperCase();
+
+    console.log(risultato);
+}
+
+
+function generaArrayCasuale() {
+    let arrayCasuale = [];
+    for (let i = 0; i < 10; i++) {
+        
+       let numeroCasuale = Math.floor(Math.random() * 101); // genera numero compreso tra 0 e 100, utilizzo math.floor per arrotondare un numero decimale
+
+        arrayCasuale.push(numeroCasuale); // Aggiungi il numero casuale all'array
+    }
+    return arrayCasuale;
+}
+function trovaNumeriPari(array) {
+    // Filtra gli elementi pari dall'array
+    let numeriPari = array.filter (function(numero) {
+        return numero % 2 === 0; //All'interno della funzione di callback, numero % 2 === 0 controlla se il numero è pari (il resto della divisione per 2 è uguale a 0). 
+    });
+    return numeriPari;
+}
+
+
+function sommaArray(array) {
+    let somma = 0;
+    array.forEach (function (numero) {
+        somma += numero;
+    });
+    return somma;
+}
+
+function sommaArray(array) {
+    
+    let somma = array.reduce(function(acc, numero) {   // il metodo reduce per sommare tutti gli elementi dell'array
+        return acc + numero;
+    }, 0); // 0 è il valore iniziale dell'accumulatore
+
+    return somma;
+}
+    // Utilizza il metodo map per creare un nuovo array
+function incrementaArrayDiN(array, n) {        
+    let nuovoArray = array.map(function(numero) {   // in cui ogni elemento dell'array originale è incrementato di n
+        return numero + n;
+    });
+
+    return nuovoArray;
+}
+function creaArrayDispari() {
+    let arrayDispari = [];
+    for (let i = 1; i <= 99; i += 2) {    // Aggiungi solo i numeri dispari all'array
+        arrayDispari.push(i);     
+    }
+    return arrayDispari;
+}
+
+
+
+let LordOfTheFlies = movies [0];
+
+
+movies.forEach(function(movie) {
+        if (movie.year< LordOfTheFlies.year) {
+            LordOfTheFlies = movie;
+        }
+    });
+
+    return LordOfTheFlies;
+
+
+
+    function numeroDiFilm(movies) {
+    return movies.length;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script> 
+    
+</body>
+</html>

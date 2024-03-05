@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap HTML Template</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/script.css">
+</head>
+<body class="bg-container">
+    <div class="w-100 d-flex justify-content-start gradient-custom" style="height: 65px;">
+        <a href="./index.html">
+        <img src="./Netflix-assets/assets/netflix_logo.png" width="100" height="50" alt="Placeholder Image" >
+        </a>
+    </div>
+    <div class="d-flex justify-content-between align-items-center" style="height: calc(100vh - 65px);">
+        <div class="m-auto " style="width: 35%; ">
+            <h1 class="text-white" style="font-size: 60px;">Edit Profile</h1>
+            <div class="border-bottom mb-3"></div>
+            <div class="d-flex gap-3">
+                <div class="">
+                    <img src="./Netflix-assets/assets/avatar.png" width="100px" height="100px" alt="">
+                </div>
+                <div class="w-100">
+                    <div class="">
+                        <input class="text-white mb-4 w-75" style="background-color: gray; " type="text" name="" id="" value="Strive Student">
+                        <h5 class="text-custom">Language:</h5>
+                        <select class="form-select-sm bg-container text-white rounded-square" style="width: 100px;" aria-label="Default select example">
+                            <option value="">English</option>
+                            <option value="">Hindi</option>
+                            <option value="">Marathi</option>
+                        </select>
+                    </div>
+                    <div class="border-bottom my-3"></div>
+                    <h5 class="text-custom">Maturity settings:</h5>
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <button class="btn text-white fw-bold" style="border-radius: 0; background-color: rgb(45,45,45);">ALL MATURITY RATINGS</button>
+                        <span class="fw-bold text-white">Show titles of all maturity ratings for this profile</span>
+                        <button class="btn btn-outline-light text-custom" style="border-radius: 0; width: 85px;">EDIT</button>
+                    </div>
+                    <div class="border-bottom my-3"></div>
+                    <h5 class="text-custom">Autoplay controls:</h5>
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <div class="d-flex align-items-start gap-2">
+                            <input class="form-check-input" style="width: 20px; height: 20px; background-color: transparent; border-radius: 0;"  type="checkbox" id="autoSizingCheck">
+                            <label class="form-check-label text-white" for="autoSizingCheck">
+                                Autoplay next episode in a series on all devices
+                            </label>
+                        </div>
+                        <div class="d-flex align-items-start gap-2">
+                            <input class="form-check-input" style="width: 20px; height: 20px; background-color: transparent; border-radius: 0;" type="checkbox" id="autoSizingCheck">
+                            <label class="form-check-label text-white"for="autoSizingCheck">
+                                Autoplay previews while browsing on all devices
+                            </label>
+                        </div>
+                    </div>
+                    <div class="border-bottom my-3"></div>
+
+                        
+
+                </div>
+            
+            </div>
+            <div class="d-flex gap-3">
+                <button class="btn btn-outline-light text-custom bg-white text-black fw-bold w-25" style="border-radius: 0;">SAVE</button>
+                <button class="btn btn-outline-light text-custom w-25" style="border-radius: 0;">CANCEL</button>
+                <button class="btn btn-outline-light text-custom w-50" style="border-radius: 0;">DELETE PROFILE</button>
+            </div>
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

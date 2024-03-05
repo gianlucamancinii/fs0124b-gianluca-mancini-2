@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form di Registrazione</title>
+</head>
+<body>
+<h2>Form di Registrazione</h2>
+
+<label for="nameInput">Nome:</label>
+<input type="text" id="nameInput">
+
+<div>
+    <button onclick="saveName()">Salva</button>
+    <button onclick="clearName()">Rimuovi</button>
+</div>
+
+<div id="savedName"></div>
+<h3>Timer</h3>
+<p>Tempo trascorso: <span id="counter"></span>s</p>
+
+<script>
+        function saveName() {
+        const name = document.getElementById('nameInput').value;
+        localStorage.setItem('savedName', name);
+        updateSavedName();   //saveName(): Prende il valore dall'input, lo salva in localStorage con la chiave 'savedName' e quindi aggiorna la visualizzazione del nome salvato.
+
+        }
+
+        function clearName() {
+        localStorage.removeItem('savedName');
+        updateSavedName();
+        }   //clearName(): Rimuove il nome da localStorage e aggiorna la visualizzazione.
+
+
+        function updateSavedName() {
+        const savedName = localStorage.getItem('savedName');
+        const savedNameDiv = document.getElementById('savedName');
+        if (savedName) {
+            savedNameDiv.textContent = `Nome salvato: ${savedName}`;
+        } else {
+            savedNameDiv.textContent = 'Nessun nome salvato.';
+        }
+        }  //updateSavedName(): Recupera il nome salvato da localStorage e lo mostra nel <div> con ID savedName.
+
+        updateSavedName(); //richiama la funzione
+/*Abbiamo un campo di input per il nome con un ID nameInput.
+Abbiamo definito tre funzioni JavaScript
+*/
+    function startCounter() {
+    let counter = sessionStorage.getItem('counter');
+    if (counter) {
+        counter = parseInt(counter, 10);
+    } else {
+        counter = 0;  //Controlla se esiste già un contatore in sessionStorage. Se esiste, lo recupera e lo converte in un numero intero. Altrimenti, inizia da zero.
+
+    }
+
+    setInterval(() => {
+        counter++;
+        sessionStorage.setItem('counter', counter);
+        document.getElementById('counter').textContent = counter;
+    }, 1000);     //Utilizza setInterval() per incrementare il contatore ogni secondo (1000 millisecondi) e aggiornare il valore nel sessionStorage e nell'elemento counter.
+
+    }
+
+    document.addEventListener('DOMContentLoaded', startCounter);
+    /*Abbiamo un elemento <span> con ID counter che mostra il valore del contatore.
+Abbiamo una funzione startCounter()
+document.addEventListener('DOMContentLoaded', startCounter); avvia la funzione startCounter() quando la pagina è pronta.*/
+</script>
+</script>
+</body>
+</html>

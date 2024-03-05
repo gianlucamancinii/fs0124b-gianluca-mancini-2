@@ -1,0 +1,22 @@
+.navbar-brand img{
+    width: 100px;
+}
+.custom-h2 {
+    font-size: 3rem; 
+    font-weight: lighter;
+    color: grey; 
+}
+.card {
+    border: 2px solid #02bcff;
+}
+
+    .btn-dest {
+        background-color: #02bcff;
+        color: #000000;
+}
+.btn-primary{
+    background-color: #02bcff;
+    border: #02bcff;
+    height: 35px;
+    width: 150px;
+}

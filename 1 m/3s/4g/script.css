@@ -1,0 +1,25 @@
+.root{
+    --main-blue: #123231
+}
+
+
+
+
+
+
+
+
+.epiTombola{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 500px;
+    height: 500px;
+    background-color: var(--main-blue);
+    color:blueviolet;
+    padding: 10px 10px 30px 10px;
+    box-sizing: border-box;
+
+
+
+
+
+}

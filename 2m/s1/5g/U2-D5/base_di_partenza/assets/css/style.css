@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.containerNav {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+    max-width: 64vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 40vh;
+    max-width: 1200px;
+}
+.leftPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+}
+.navbar {
+    background-color: #ffc017;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    z-index: 1000;
+    height: 75px;
+
+}
+
+.navbar a {
+    color: #191919;
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: small;
+}
+
+.hero {
+    background-color:#ffc017;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin-top:  75px;
+    border-bottom: 2px solid #000;
+    max-height: fit-content;
+}
+
+h1 {
+    font-size: 7em;
+    color: #000000;
+    font-family: "Spectral", serif;
+    font-style: normal;
+}
+
+.p1 {
+    font-size: 1.5em;
+    color: #000;
+    
+}
+.btn {
+    display: inline-block;
+    background-color: #191919;
+    color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: small;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn2{
+    background-color: #191919;
+    color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+    font-size: larger;
+}
+.btn:hover {
+    background-color: grey;
+}
+.btn2:hover{
+    background-color: grey;
+}
+.trading{                
+display: flex;
+position: relative;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+.featured {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.story{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+}
+
+.item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+.linkStory{
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.pStory{
+font-weight: bold;
+
+
+
+}
+.dataStory{
+    font-size: 12px;
+    font-weight: lighter;
+    padding-top: 10px;
+}
+img{
+    height: 30px;
+    border-radius: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+#logoTrading{
+    height: 30px;
+}
+.container3{
+    display: flex;
+    justify-content: center;
+    width:60% ;
+    margin: auto;
+}
+.listLeft{
+width: 50%;
+flex-wrap: wrap;
+}
+.listItem{
+    display: flex;
+    justify-content: center;   
+}
+.rightSide img{
+width: 300px;
+height: 200px;
+padding-left: 20px;
+}
+.stickyBar{
+    width: 50%;
+    position: sticky;
+    padding: 20px;
+    z-index: 100;
+    top: -100px;
+
+}
+.stickyBar h4 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.btn3{
+    border: none;
+    height: 25px;
+    width: 65px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.insideStory{
+    font-size: 15px;
+    font-weight: lighter;
+
+}
+.p2Story{
+    font-size: 20px;
+    font-weight: bold; 
+}
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 10px;
+}
