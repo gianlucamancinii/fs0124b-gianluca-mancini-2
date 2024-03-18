@@ -55,7 +55,7 @@ Abbiamo definito tre funzioni JavaScript
     } else {
         counter = 0;  //Controlla se esiste già un contatore in sessionStorage. Se esiste, lo recupera e lo converte in un numero intero. Altrimenti, inizia da zero.
 
-    }
+    } // let counter = sessionStorage.getItem('counter') || 0;
 
     setInterval(() => {
         counter++;
@@ -63,7 +63,7 @@ Abbiamo definito tre funzioni JavaScript
         document.getElementById('counter').textContent = counter;
     }, 1000);     //Utilizza setInterval() per incrementare il contatore ogni secondo (1000 millisecondi) e aggiornare il valore nel sessionStorage e nell'elemento counter.
 
-    }
+    } 
 
     document.addEventListener('DOMContentLoaded', startCounter);
     /*Abbiamo un elemento <span> con ID counter che mostra il valore del contatore.
