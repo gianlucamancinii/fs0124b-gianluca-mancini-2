@@ -1,12 +1,12 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8 p-5 bg-secondary text-dark text-center">
-            <h1>Le nostre auto {{brand}}</h1>
+        <div class="col-12 col-md-8 p-5 text-dark text-center">
+            <h1>Le nostre auto {{brand}} 🏎️</h1>
         </div>
     </div>
     <div class="row mt-5">
         <div class="col-12  col-md-6 col-lg-6 d-flex justify-content-center mb-3" *ngFor="let auto of autos">
-            <div class="card custom-card" [ngClass]="{
+            <div class=" card custom-card" [ngClass]="{
                 'bg-success': auto.available,
                 'bg-danger': !auto.available
             }">

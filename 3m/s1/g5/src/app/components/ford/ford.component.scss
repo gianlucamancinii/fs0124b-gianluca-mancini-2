@@ -1,5 +1,11 @@
+.custom-card {
+    max-width: 350px; /* Imposta la larghezza massima della card */
+}
 
-.custom-card{
-    width: fit-content;
-    height: fit-content;
+.custom-card .card-img-top {
+    max-height: 350px; /* Imposta l'altezza massima dell'immagine */
+}
+
+.custom-card .card-body {
+    padding: 10px; /* Riduce il padding interno della card */
 }
