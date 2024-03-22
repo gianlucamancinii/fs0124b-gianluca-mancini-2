@@ -22,32 +22,23 @@
     <div>
         <h3 class="text-center">Auto in evidenza</h3>
         <div class="row">
-            <div class="col-6 d-flex justify-content-center" *ngFor="let random of randomAuto">
-                <div class="card" [ngClass]="{
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center" *ngFor="let random of randomAuto">
+                <div class="card custom-card" [ngClass]="{
                     'bg-success': random.available,
                     'bg-danger': !random.available
                 }">
                     <img [src]="random.modelImage"
-                        class="card-img-top custom-card"
+                        class="card-img-top "
                         alt="{{random.brand}} {{random.model}}">
                     <div class="card-body">
-                        <h5 class="card-title">{{random.brand}} {{random.model}}
-                        </h5>
+                        <h5 class="card-title">{{random.brand}} {{random.model}}</h5>
                         <p class="card-text">
-                            <span
-                                class="badge  me-1 text-uppercase">Anno:
-                                {{random.year}}</span>
-                            <span
-                                class="badge me-1 text-uppercase">Prezzo:
-                                {{random.price}}</span>
-                            <span *ngIf="random.available; else elseSpan"
-                                class="badge  me-1 text-uppercase">Pronta
-                                consegna: sì</span>
-                                <ng-template #elseSpan>
-                                    <span
-                                class="badge  me-1 text-uppercase">Pronta
-                                consegna: no</span>
-                                </ng-template>
+                            <span class="badge me-1 text-uppercase">Anno: {{random.year}}</span>
+                            <span class="badge me-1 text-uppercase">Prezzo: {{random.price}}</span>
+                            <span *ngIf="random.available; else elseSpan" class="badge me-1 text-uppercase">Pronta consegna: sì</span>
+                            <ng-template #elseSpan>
+                                <span class="badge me-1 text-uppercase">Pronta consegna: no</span>
+                            </ng-template>
                         </p>
                         <a [routerLink]="['/' + random.brand.toLowerCase()]" class="btn btn-primary">Tutte le nostre {{random.brand}}</a>
                     </div>
@@ -55,4 +46,5 @@
             </div>
         </div>
     </div>
+
 </div>

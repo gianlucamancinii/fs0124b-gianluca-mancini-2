@@ -1,36 +1,27 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-4 p-5 bg-secondary text-dark  ">
+        <div class="col-12 col-md-8 p-5 bg-secondary text-dark text-center">
             <h1>Le nostre auto {{brand}}</h1>
         </div>
     </div>
     <div class="row mt-5">
-        <div class="col-12 d-flex justify-content-center mb-3" *ngFor="let auto of autos">
-            <div class="card" [ngClass]="{
+        <div class="col-12  col-md-6 col-lg-6 d-flex justify-content-center mb-3" *ngFor="let auto of autos">
+            <div class="card custom-card" [ngClass]="{
                 'bg-success': auto.available,
                 'bg-danger': !auto.available
             }">
                 <img [src]="auto.modelImage"
-                    class="card-img-top custom-card"
+                    class="card-img-top"
                     alt="{{auto.brand}} {{auto.model}}">
                 <div class="card-body">
-                    <h5 class="card-title h2">{{auto.brand}} {{auto.model}}
-                    </h5>
-                    <p class="card-text h4">
-                        <span
-                            class="badge  me-1 text-uppercase">Anno:
-                            {{auto.year}}</span>
-                        <span
-                            class="badge  me-1 text-uppercase">Prezzo:
-                            {{auto.price}}</span>
-                        <span *ngIf="auto.available; else elseSpan"
-                            class="badge  me-1 text-uppercase">Pronta
-                            consegna: sì</span>
-                            <ng-template #elseSpan>
-                                <span
-                            class="badge  me-1 text-uppercase">Pronta
-                            consegna: no</span>
-                            </ng-template>
+                    <h5 class="card-title h4 text-center">{{auto.brand}} {{auto.model}}</h5>
+                    <p class="card-text h5 text-center">
+                        <span class="badge me-2 text-uppercase">Anno: {{auto.year}}</span>
+                        <span class="badge me-2 text-uppercase">Prezzo: {{auto.price}}</span>
+                        <span *ngIf="auto.available; else elseSpan" class="badge text-uppercase">Pronta consegna: sì</span>
+                        <ng-template #elseSpan>
+                            <span class="badge text-uppercase">Pronta consegna: no</span>
+                        </ng-template>
                     </p>
                 </div>
             </div>
