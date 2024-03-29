@@ -1,0 +1,15 @@
+<div class="singleTodo"
+    [ngClass]="{'bg-success rounded': todo.completed,
+      'bg-danger': !todo.completed}">
+
+        <label for= "{{todo.id | idfy:'todo'}}" class="fw-bolder">
+            <input (change)="toggleTask(todo.id)"
+            [checked]="todo.completed"
+            type="checkbox"
+            id="{{todo.id | idfy:'todo'}}">
+            {{todo.todo}}
+        </label>
+
+      <p>Assegnato a: {{todo.user! | fullName}}
+      </p>
+</div>
