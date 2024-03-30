@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { DoneComponent } from './pages/done/done.component';
 import { LeftComponent } from './pages/left/left.component';
-import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
   {
@@ -21,11 +20,6 @@ const routes: Routes = [
     component: LeftComponent,
     title:'List'
   },
-  {
-    path: "users",
-    component: UsersComponent,
-    title:'user'
-  }
 ];
 
 @NgModule({

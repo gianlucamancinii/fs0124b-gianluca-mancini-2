@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { Todo } from 'src/app/interfaces/todo.interface';
-import { TodoService } from 'src/app/services/todo.service';
+import { Todo } from '../../interfaces/todo.interface';
+import { todos } from '../../../assets/todo';
+import { TodoService } from '../../services/todo.service';
 
 @Component({
   selector: 'app-todos',
@@ -15,6 +16,6 @@ export class TodosComponent implements OnChanges {
 
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.todos = this.todoSrv.filterByQuery(this.query?.toLowerCase() || "")
+    this.todos = this.todoSrv.handleQueryFilter(this.query?.toLowerCase() || "")
   }
 }

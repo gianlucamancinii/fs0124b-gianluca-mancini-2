@@ -1,51 +1,45 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../interfaces/todo.interface';
-import { todos } from 'src/assets/todo';
-import { UserService } from './user.service';
+import { todos } from '../../assets/todo';
 import { User } from '../interfaces/user.interface';
+import { users } from '../../assets/users';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoService {
   todos: Todo[] = todos
-  constructor(private userSrv: UserService) {
+  users: User []= users
+  constructor() {
     this.populate()
   }
 
-  get all(): Todo[] {
+  get all(): Todo[] {   //restituisci tutti i Todo
     return this.todos
   }
-  get completed(): Todo[] {
-    return this.todos.filter(todo => todo.completed)
+  get completed(): Todo[] {   // restituisce tutti i Todo completati
+    return this.todos.filter(todo => todo.completed)  // di tutti i todo prendimi solo quelli completati
   }
   get notCompleted(): Todo[] {
-    return this.todos.filter(todo => !todo.completed)
+    return this.todos.filter(todo => !todo.completed)// stessa cosa ma prendimi quelli non completati
   }
-  filterByQuery(query: string) {
+  handleQueryFilter(query: string) {     //data una query in forma di stringa, faccio un filtro in base a quella query per nome e cognome
 
     return this.todos.filter(todo => {
-      console.log(todo.user);
 
       return todo.user?.firstName.toLowerCase().includes(query) || todo.user?.lastName.toLowerCase().includes(query)
     })
   }
   populate() {
     this.todos.forEach(todo => {
-      todo.user = this.userSrv.getById(todo.userId)
+    todo.user =this.users.find(user => user.id === todo.userId)
     })
   }
-  toggleCompletion(id: number) {
-    const found = this.todos.find(todo => todo.id === id)
+  handleChangeStatus(id: number) {   // viene chiamato da single todo e cambia lo stato di un todo
+    let found = this.todos.find(todo => todo.id === id)
     if (found) {
       //se .find non trova nulla ritornera' undefined, altrimenti un oggetto di tipo Todo
       found.completed = !found.completed
-    } else alert("sei stato wichelizzato")
-  }
-  mapByUser(): User[] {
-    return this.userSrv.all.map(user => {
-      user.todos = this.all.filter(todo => todo.userId === user.id)
-      return user
-    })
+    }
   }
 }

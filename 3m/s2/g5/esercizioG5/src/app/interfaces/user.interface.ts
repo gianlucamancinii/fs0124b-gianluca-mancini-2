@@ -7,6 +7,6 @@ export interface User {
   email: string;
   image: string;
   title: string;
-  todos?: Todo[]
+  todos?: Todo[] // collego Todo interface
 }
 

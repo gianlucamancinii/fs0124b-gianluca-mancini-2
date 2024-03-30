@@ -2,14 +2,12 @@
     [ngClass]="{'bg-success rounded': todo.completed,
       'bg-danger': !todo.completed}">
 
-        <label for= "{{todo.id | idfy:'todo'}}" class="fw-bolder">
+        <label for= "{{todo.id}}" class="fw-bolder">
             <input (change)="toggleTask(todo.id)"
             [checked]="todo.completed"
             type="checkbox"
-            id="{{todo.id | idfy:'todo'}}">
+            id="{{todo.id}}">
             {{todo.todo}}
         </label>
-
-      <p>Assegnato a: {{todo.user! | fullName}}
-      </p>
-</div>
+        <p>Assigned to : {{ todo.user?.firstName }} {{ todo.user?.lastName }}</p>
+      </div>

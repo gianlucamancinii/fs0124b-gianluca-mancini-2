@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
-import { Todo } from 'src/app/interfaces/todo.interface';
-import { TodoService } from 'src/app/services/todo.service';
+import { Todo } from '../../interfaces/todo.interface';
+import { TodoService } from '../../services/todo.service';
 
 @Component({
   selector: 'app-left',
@@ -8,9 +8,12 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./left.component.scss']
 })
 export class LeftComponent implements OnInit {
-  todos!: Todo[]
+  todos!: Todo[]  //todos si aspetta l'interfaccia Todo
+
+
   constructor(private todoSrv: TodoService) { }
-  ngOnInit(): void {
+  ngOnInit(): void { //void non resituisce nulla
+
     this.todos = this.todoSrv.notCompleted
 
   }
