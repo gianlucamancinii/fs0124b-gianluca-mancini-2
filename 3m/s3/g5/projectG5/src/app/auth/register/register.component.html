@@ -1,0 +1,10 @@
+<h1>Registrati</h1>
+<form>
+
+  <input type="text" name="nome" [(ngModel)]="registerData.nickname" class="form-control" placeholder="nome">
+  <input type="text" name="email" [(ngModel)]="registerData.email" class="form-control" placeholder="email">
+  <input type="text"name="password" [(ngModel)]="registerData.password"  class="form-control" placeholder="password">
+  <button (click)="signUp()" class="btn btn-success"> registrati</button>
+
+
+</form>

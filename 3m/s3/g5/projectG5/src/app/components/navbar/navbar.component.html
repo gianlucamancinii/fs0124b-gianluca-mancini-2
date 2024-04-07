@@ -1,0 +1,14 @@
+<nav class="py-2 bg-body-tertiary border-bottom">
+  <div class="container d-flex flex-wrap">
+    <ul class="nav me-auto">
+      <li class="nav-item"><a routerLink="" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
+      <li class="nav-item" *ngIf="isUserLoggedIn"><a routerLink="/dashboard" class="nav-link link-body-emphasis px-2">dashboard</a></li>
+      <li class="nav-item"><a routerLink="/users" class="nav-link link-body-emphasis px-2">account</a></li>
+    </ul>
+    <ul class="nav">
+      <li class="nav-item"><button class="btn btn-success"><a routerLink="/auth/login" class="nav-link link-body-emphasis px-2">Login</a></button></li>
+      <li class="nav-item"><button class="btn btn-danger"><a routerLink="/auth/register" class="nav-link link-body-emphasis px-2">Register</a></button></li>
+    </ul>
+    <button (click)="logout()" class="btn btn-warning">esci</button>
+  </div>
+</nav>

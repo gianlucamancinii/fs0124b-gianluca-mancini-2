@@ -1,0 +1,180 @@
+{
+    "Users":[
+      {
+        "id": 1,
+        "nickname": "john_doe",
+        "email": "john.doe@example.com",
+        "password": "securepassword1"
+      },
+      {
+        "id": 2,
+        "nickname": "jane_smith",
+        "email": "jane.smith@example.com",
+        "password": "strongpass123"
+      },
+      {
+        "id": 3,
+        "nickname": "alex_brown",
+        "email": "alex.brown@example.com",
+        "password": "password456"
+      },
+      {
+        "id": 4,
+        "nickname": "emily_jones",
+        "email": "emily.jones@example.com",
+        "password": "passw0rd!"
+      },
+      {
+        "id": 5,
+        "nickname": "sam_wilson",
+        "email": "sam.wilson@example.com",
+        "password": "pass1234"
+      },
+      {
+        "id": 6,
+        "nickname": "lucy_evans",
+        "email": "lucy.evans@example.com",
+        "password": "p@ssw0rd"
+      },
+      {
+        "id": 7,
+        "nickname": "mike_adams",
+        "email": "mike.adams@example.com",
+        "password": "mypass456"
+      },
+      {
+        "id": 8,
+        "nickname": "sophie_parker",
+        "email": "sophie.parker@example.com",
+        "password": "password789"
+      },
+      {
+        "id": 9,
+        "nickname": "chris_miller",
+        "email": "chris.miller@example.com",
+        "password": "passpass1"
+      },
+      {
+        "id": 10,
+        "nickname": "olivia_clark",
+        "email": "olivia.clark@example.com",
+        "password": "password4321"
+      }
+    ]
+    ,
+    "movies-popular":[
+      {
+          "userId": 1,
+          "id": 1,
+          "titolo": "Il Padrino",
+          "anno": 1972,
+          "descrizione": "Un capolavoro diretto da Francis Ford Coppola, basato sul romanzo di Mario Puzo. Racconta la storia della famiglia Corleone e del loro coinvolgimento nel mondo della mafia."
+      },
+      {
+          "userId": 2,
+          "id": 2,
+          "titolo": "Forrest Gump",
+          "anno": 1994,
+          "descrizione": "Diretto da Robert Zemeckis, questo film racconta la straordinaria vita di Forrest Gump, interpretato da Tom Hanks, attraverso diversi momenti chiave della storia americana."
+      },
+      {
+          "userId": 3,
+          "id": 3,
+          "titolo": "Titanic",
+          "anno": 1997,
+          "descrizione": "Un film epico diretto da James Cameron, che racconta la storia romantica tra Jack e Rose a bordo del transatlantico Titanic, culminando nella tragica collisione con un iceberg."
+      },
+      {
+          "userId": 4,
+          "id": 4,
+          "titolo": "Pulp Fiction",
+          "anno": 1994,
+          "descrizione": "Diretto da Quentin Tarantino, questo film è una collezione di storie interconnesse che coinvolgono gangster, un pugile, due criminali e molti altri personaggi eccentrici."
+      },
+      {
+          "userId": 5,
+          "id": 5,
+          "titolo": "La vita è bella",
+          "anno": 1997,
+          "descrizione": "Un commovente film diretto e interpretato da Roberto Benigni, che racconta la storia di un padre e suo figlio durante l'Olocausto. Combina elementi di commedia e dramma in modo toccante."
+      },
+      {
+          "userId": 6,
+          "id": 6,
+          "titolo": "Schindler's List",
+          "anno": 1993,
+          "descrizione": "Diretto da Steven Spielberg, questo film racconta la storia vera di Oskar Schindler, un imprenditore tedesco che ha salvato la vita di oltre 1.200 ebrei durante l'Olocausto."
+      },
+      {
+          "userId": 7,
+          "id": 7,
+          "titolo": "Il Signore degli Anelli: Il ritorno del re",
+          "anno": 2003,
+          "descrizione": "L'epica conclusione della trilogia diretta da Peter Jackson, basata sui romanzi di J.R.R. Tolkien. Segue la battaglia finale per il controllo della Terra di Mezzo."
+      },
+      {
+          "userId": 8,
+          "id": 8,
+          "titolo": "Fight Club",
+          "anno": 1999,
+          "descrizione": "Diretto da David Fincher, il film segue un uomo insoddisfatto (interpretato da Edward Norton) che si unisce a un carismatico ribelle (interpretato da Brad Pitt) per formare un club clandestino di lotta."
+      },
+      {
+          "userId": 9,
+          "id": 9,
+          "titolo": "Matrix",
+          "anno": 1999,
+          "descrizione": "Un film rivoluzionario diretto dai fratelli Wachowski, che esplora concetti di realtà virtuale e controllo. Segue Neo (interpretato da Keanu Reeves) nella sua scoperta della verità dietro il mondo apparentemente reale."
+      },
+      {
+          "userId": 10,
+          "id": 10,
+          "titolo": "Interstellar",
+          "anno": 2014,
+          "descrizione": "Diretto da Christopher Nolan, questo film di fantascienza segue un gruppo di astronauti in un viaggio oltre il nostro sistema solare per cercare una nuova casa per l'umanità, mentre la Terra si avvicina al collasso."
+      }
+  ],
+    "favorites"  : [
+      {
+          "userId": 1,
+          "favoriteMovies": [1, 3, 7]
+      },
+      {
+          "userId": 2,
+          "favoriteMovies": [2, 4, 8]
+      },
+      {
+          "userId": 3,
+          "favoriteMovies": [5, 9, 10]
+      },
+      {
+          "userId": 4,
+          "favoriteMovies": [1, 6, 8]
+      },
+      {
+          "userId": 5,
+          "favoriteMovies": [3, 5, 7]
+      },
+      {
+          "userId": 6,
+          "favoriteMovies": [2, 4, 9]
+      },
+      {
+          "userId": 7,
+          "favoriteMovies": [1, 5, 10]
+      },
+      {
+          "userId": 8,
+          "favoriteMovies": [3, 6, 8]
+      },
+      {
+          "userId": 9,
+          "favoriteMovies": [2, 7, 9]
+      },
+      {
+          "userId": 10,
+          "favoriteMovies": [4, 6, 10]
+      }
+  ]
+
+}
